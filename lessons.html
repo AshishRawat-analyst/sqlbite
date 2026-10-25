@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn SQL step by step with simple definitions, examples, practice questions and quizzes.">
+  <title>SQL Lessons | SQLBite</title>
+  <link rel="stylesheet" href="lessons.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js" defer></script>
+  <script src="lessons.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><img class="brand-logo" src="logo.svg" alt=""><span>SQL<span class="accent">Bite</span></span></a>
+    <nav><a href="index.html">Home</a><a href="syllabus.html">Syllabus</a><a class="active" href="lessons.html">Lessons</a></nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">SQL COURSE · BEGINNER TO ADVANCED</div>
+      <h1>Learn SQL, <span>one bite at a time.</span></h1>
+      <p>Simple definitions, clear examples, practice questions and a quick quiz after every topic.</p>
+      <div class="hero-tags"><span>✓ Topic-by-topic</span><span>⌨ MySQL examples</span><span>◎ Quiz after each lesson</span></div>
+    </section>
+
+    <div class="course-layout">
+      <aside class="sidebar">
+        <label for="topicSearch">Find a topic</label>
+        <input id="topicSearch" type="search" placeholder="Search topics, lessons, examples..." aria-label="Search SQL lessons">
+        <div class="progress-wrap"><div class="progress-label"><span>Your progress</span><strong id="progressText">0 / 0</strong></div><div class="progress-track"><div id="progressBar" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"></div></div><p id="progressStorageMessage" class="progress-storage-message" role="status" hidden></p></div>
+        <div id="moduleList" class="module-list"></div>
+        <p class="search-empty" id="topicSearchEmpty" hidden>No lesson matches. Try another topic or keyword.</p>
+      </aside>
+
+      <section class="lesson-area">
+        <div class="lesson-topline"><span id="moduleLabel">MODULE 01</span><span id="topicPosition">TOPIC 01</span></div>
+        <h2 id="lessonTitle">Welcome to SQLBite</h2>
+        <p class="lesson-intro" id="lessonIntro">Choose a topic from the left to begin your lesson.</p>
+        <div class="lesson-section">
+          <div class="section-title"><span class="section-icon">i</span><h3>Definition</h3></div>
+          <p id="definitionText">SQL is used to store, retrieve and manage data in relational databases.</p>
+          <div class="simple-note"><strong>Simple meaning:</strong> <span id="simpleText">SQL helps you ask a database questions and get answers from its data.</span></div>
+          <div id="typeGuide" class="type-guide" hidden></div>
+        </div>
+        <div class="lesson-section">
+          <div class="section-title"><span class="section-icon code-icon">&lt;/&gt;</span><h3>Example</h3></div>
+          <p id="exampleIntro">Here is a simple query.</p>
+          <div class="code-window"><div class="code-head"><span>example.sql</span><button id="copyQuery" type="button">Copy query</button></div><pre><code id="exampleCode">SELECT * FROM Employees;</code></pre></div>
+          <div class="output-note"><strong>What it does:</strong> <span id="exampleOutput">Displays all columns and rows from Employees.</span></div>
+        </div>
+        <div class="lesson-section practice-section">
+          <div class="section-title"><span class="section-icon">✎</span><h3>Practice questions</h3></div>
+          <p class="helper">Choose a question, write your SQL, then run it to check the query and inspect its result.</p>
+          <ol id="practiceList" class="practice-list"></ol>
+          <div class="lesson-sql-editor">
+            <label for="practiceQuestionSelect">Question to solve</label>
+            <select id="practiceQuestionSelect" aria-label="Choose a lesson practice question"></select>
+            <p id="practicePrompt" class="practice-prompt"></p>
+            <label for="practiceSqlEditor">Your SQL query</label>
+            <textarea id="practiceSqlEditor" spellcheck="false" aria-label="SQL practice editor" placeholder="Write a query for the selected question..."></textarea>
+            <div class="lesson-sql-actions"><button id="runPracticeQuery" class="btn btn-primary" type="button" disabled>Run &amp; check</button><button id="showPracticeHint" class="btn btn-secondary" type="button">Show hint</button></div>
+            <p id="practiceHint" class="practice-hint" hidden></p>
+            <p id="practiceSqlStatus" class="practice-sql-status" role="status" aria-live="polite">Loading the SQL practice engine… Internet connection is required the first time.</p>
+            <div id="practiceSqlResult" class="practice-sql-result" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="lesson-section quiz-section">
+          <div class="section-title"><span class="section-icon quiz-icon">?</span><h3>Quick quiz</h3></div>
+          <p id="quizQuestion" class="quiz-question">Which SQL keyword is used to retrieve data?</p>
+          <div id="quizOptions" class="quiz-options"></div>
+          <div id="quizFeedback" class="quiz-feedback" aria-live="polite"></div>
+          <div class="lesson-actions"><button id="checkQuiz" class="btn btn-primary">Check answer</button><button id="nextTopic" class="btn btn-secondary">Next topic →</button></div>
+        </div>
+        <div class="lesson-footer"><span id="completionMessage">Learn it, try it, then take the quiz.</span><button id="markComplete" class="text-action">Mark topic complete ✓</button></div>
+      </section>
+    </div>
+    <footer>© <span id="year"></span> SQLBite · Learn SQL. Think logically. Solve problems.</footer>
+  </main>
+</body>
+</html>

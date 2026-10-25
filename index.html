@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn SQL step by step with SQLBite. Explore lessons, practice queries, and take quizzes.">
+  <title>SQLBite — Learn SQL, One Query at a Time</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">🚀 Start your SQL journey today — <strong>learn SQL by doing.</strong></div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#home" class="brand" aria-label="SQLBite home">
+        <img class="brand-logo" src="logo.svg" alt=""><span>SQL<em>Bite</em></span>
+      </a>
+
+      <nav id="mainNav" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="syllabus.html">Syllabus</a>
+        <a href="lessons.html">Courses</a>
+        <a href="lab.html">SQL Lab</a>
+        <a href="notes.html">Notes</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-outline" href="lessons.html">Explore Course</a>
+        <a class="btn btn-primary" href="contact.html">Course Contact ↗</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> YOUR SQL LEARNING PLAYGROUND</div>
+          <h1>Master SQL,<br><span class="highlight">one query</span> at a time.</h1>
+          <p class="hero-copy">Learn SQL from the basics to advanced concepts with clear examples, hands-on practice, topic-wise quizzes, and real-world challenges.</p>
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="syllabus.html">Start Learning <span>→</span></a>
+            <a class="btn btn-outline" href="lab.html">⌘ Practice SQL</a>
+          </div>
+          <div class="hero-proof">
+            <span class="proof-item"><span class="check">✓</span> Beginner friendly</span>
+            <span class="proof-item"><span class="check">✓</span> Learn by doing</span>
+            <span class="proof-item"><span class="check">✓</span> Real-world practice</span>
+          </div>
+        </div>
+
+        <div style="position:relative">
+          <div class="floating-tag one">⚡ Learn by writing real queries</div>
+          <div class="code-window" aria-label="Example SQL code window">
+            <div class="window-top">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>query.sql</span>
+              <span>SQLBite Lab</span>
+            </div>
+            <div class="code-content">
+              <div class="code-label">-- Find your best-selling regions</div>
+              <div class="code-line"><span class="line-no">1</span><span><span class="sql-key">SELECT</span> <span class="sql-name">Region</span>,</span></div>
+              <div class="code-line"><span class="line-no">2</span><span>       <span class="sql-func">SUM</span>(Sales) <span class="sql-key">AS</span> TotalSales</span></div>
+              <div class="code-line"><span class="line-no">3</span><span><span class="sql-key">FROM</span> Orders</span></div>
+              <div class="code-line"><span class="line-no">4</span><span><span class="sql-key">GROUP BY</span> Region</span></div>
+              <div class="code-line"><span class="line-no">5</span><span><span class="sql-key">ORDER BY</span> TotalSales <span class="sql-key">DESC</span>;</span></div>
+              <div class="run-row">
+                <span class="result-chip">✓ Query example ready</span>
+                <a class="run-btn" href="lab.html">TRY IN SQL LAB ↗</a>
+              </div>
+            </div>
+          </div>
+          <div class="floating-tag two"><span class="tag-icon">✓</span><span>Learn a topic<br><strong>Then test yourself</strong></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-strip">
+      <div class="container stats">
+        <div class="stat"><span class="stat-icon">▤</span><span><strong>Step by step</strong><small>Structured lessons</small></span></div>
+        <div class="stat"><span class="stat-icon">⌘</span><span><strong>Hands-on</strong><small>SQL practice lab</small></span></div>
+        <div class="stat"><span class="stat-icon">✓</span><span><strong>Topic quizzes</strong><small>Check your learning</small></span></div>
+        <div class="stat"><span class="stat-icon">↗</span><span><strong>Problem solving</strong><small>Analytical skills</small></span></div>
+      </div>
+    </div>
+
+    <section id="courses">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Explore the syllabus</div>
+          <h2>Build your SQL skills, one topic at a time.</h2>
+          <p>Start with the fundamentals, practise every concept, and gradually move towards advanced SQL and real-world problems.</p>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card">
+            <div class="topic-icon">01</div>
+            <h3>SQL Fundamentals</h3>
+            <p>Understand databases, tables, SQL syntax, and the SELECT statement.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">⌕</div>
+            <h3>Filtering & Sorting</h3>
+            <p>Use WHERE, AND, OR, LIKE, IN, BETWEEN, and ORDER BY.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">Σ</div>
+            <h3>Aggregate Functions</h3>
+            <p>Calculate COUNT, SUM, AVG, MIN, and MAX with real examples.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">▦</div>
+            <h3>GROUP BY & HAVING</h3>
+            <p>Summarize data, group records, and filter grouped results.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">⛓</div>
+            <h3>SQL Joins</h3>
+            <p>Combine tables with INNER, LEFT, RIGHT, and other joins.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">⤵</div>
+            <h3>Subqueries</h3>
+            <p>Solve problems using nested queries and comparison logic.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">⌘</div>
+            <h3>Advanced SQL</h3>
+            <p>Practice CASE, CTEs, window functions, and ranking problems.</p>
+            <a class="topic-link" href="lessons.html">Explore lessons <span>→</span></a>
+          </article>
+          <article class="topic-card">
+            <div class="topic-icon">✦</div>
+            <h3>Real-world SQL</h3>
+            <p>Use SQL challenges to answer practical questions about business data.</p>
+            <a class="topic-link" href="lab.html">Try a challenge <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="learning-section" id="syllabus">
+      <div class="container learning-grid">
+        <div class="learning-copy">
+          <div class="section-kicker">Your learning path</div>
+          <h2>From your first SELECT to confident data analysis.</h2>
+          <p>Every topic follows a simple learning flow: definition, syntax, example, practice question, and a short quiz. Learn at your own pace and build confidence with every query.</p>
+          <a class="btn btn-primary" href="syllabus.html">View Full Syllabus →</a>
+        </div>
+        <div class="roadmap">
+          <div class="roadmap-head"><h3>SQLBite Learning Roadmap</h3><span>4 STAGES</span></div>
+          <div class="roadmap-item"><div class="step-number">01</div><div><h4>Learn the basics</h4><p>SELECT, DISTINCT, WHERE, ORDER BY, LIMIT</p></div></div>
+          <div class="roadmap-item"><div class="step-number">02</div><div><h4>Work with data</h4><p>Functions, GROUP BY, HAVING, NULL values</p></div></div>
+          <div class="roadmap-item"><div class="step-number">03</div><div><h4>Connect and analyze</h4><p>Joins, subqueries, CASE, CTEs, window functions</p></div></div>
+          <div class="roadmap-item"><div class="step-number">04</div><div><h4>Solve business problems</h4><p>Real scenarios, data challenges, and clear explanations</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lab">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-kicker">Practice, don't just watch</div>
+          <h2>Everything you need to learn by doing.</h2>
+          <p>Build practical SQL skills with dedicated learning tools designed for beginners and aspiring data analysts.</p>
+        </div>
+        <div class="features-grid">
+          <a class="feature" href="lab.html"><div class="feature-icon">⌨️</div><h3>Live SQL Practice Lab</h3><p>Write queries, review examples, and practise with sample tables.</p></a>
+          <a class="feature" href="notes.html"><div class="feature-icon">📝</div><h3>SQL Notes</h3><p>Revise definitions, syntax, examples, and common mistakes in one organized place.</p></a>
+          <article class="feature"><div class="feature-icon">🧩</div><h3>Topic-wise Quizzes</h3><p>Test what you learned after each topic and identify concepts that need revision.</p></article>
+          <article class="feature"><div class="feature-icon">🚀</div><h3>Real-world Challenges</h3><p>Use SQL to answer business questions about customers, orders, sales, and performance.</p></article>
+          <a class="feature" href="online-course.html"><div class="feature-icon">🌐</div><h3>Online Course</h3><p>Learn SQL remotely with a flexible online course.</p></a>
+          <a class="feature" href="offline-course.html"><div class="feature-icon">📍</div><h3>Offline Course</h3><p>Ask about in-person SQL course availability and details.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-wrap">
+      <div class="container">
+        <div class="cta">
+          <div><h2>Ready to write your first query?</h2><p>Start with the basics. Practice consistently. Grow your SQL confidence.</p></div>
+          <a href="syllabus.html" class="btn btn-primary">Begin Learning Now →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html#home" class="brand"><img class="brand-logo" src="logo.svg" alt=""><span>SQL<em>Bite</em></span></a>
+          <p>A practical place to learn SQL through clear lessons, hands-on practice, quizzes, and business challenges.</p>
+        </div>
+        <div><h4>Learn SQL</h4><ul><li><a href="syllabus.html">Full Syllabus</a></li><li><a href="lessons.html">SQL Lessons</a></li><li><a href="notes.html">SQL Notes</a></li></ul></div>
+        <div><h4>Practice</h4><ul><li><a href="lab.html">SQL Practice Lab</a></li><li><a href="notes.html">Revision Notes</a></li></ul></div>
+        <div><h4>SQLBite</h4><ul><li><a href="about.html">About Me</a></li><li><a href="contact.html">Course Contact</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> SQLBite. All rights reserved.</span><span>Learn at your pace · Practice with purpose</span></div>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

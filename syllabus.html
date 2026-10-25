@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete SQL syllabus from beginner to advanced with examples, practice activities, and quizzes.">
+  <title>SQL Syllabus | SQLBite</title>
+  <link rel="stylesheet" href="syllabus.css">
+  <script src="syllabus.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="SQLBite home"><img class="brand-logo" src="logo.svg" alt=""><span>SQL<span class="brand-accent">Bite</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a class="active" href="syllabus.html">Syllabus</a>
+      <a href="#learning-path">Learning Path</a>
+      <a href="#resources">Resources</a>
+      <a href="about.html">About</a>
+      <a class="nav-cta" href="#syllabus">Start Learning <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR SQL LEARNING ROADMAP</div>
+        <h1>Master SQL, one <span>bite</span> at a time.</h1>
+        <p class="hero-copy">A structured path from your first query to advanced SQL problem solving. Learn concepts, see examples, practise, and test yourself.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#syllabus">Explore syllabus <span>↓</span></a>
+          <a class="button button-ghost" href="#learning-path">View learning path</a>
+        </div>
+        <div class="hero-meta"><span><b>4</b> learning levels</span><i></i><span><b>10</b> curriculum modules</span><i></i><span><b>Practice</b> as you learn</span></div>
+      </div>
+      <div class="hero-card" aria-label="Example SQL query">
+        <div class="terminal-top"><div class="window-dots"><i></i><i></i><i></i></div><span>your_first_query.sql</span><span class="terminal-status">● Ready</span></div>
+        <div class="terminal-code"><div><span class="line-no">01</span><span class="sql-purple">SELECT</span> customer_name, sales</div><div><span class="line-no">02</span><span class="sql-purple">FROM</span> orders</div><div><span class="line-no">03</span><span class="sql-purple">WHERE</span> sales <span class="sql-orange">&gt;</span> <span class="sql-green">5000</span>;</div></div>
+        <div class="terminal-result"><span class="result-check">✓</span><div><strong>Query mindset: unlocked</strong><small>Read data. Find patterns. Solve problems.</small></div></div>
+        <div class="floating-chip chip-top">SELECT · WHERE</div><div class="floating-chip chip-bottom">Learn by doing ↗</div>
+      </div>
+    </section>
+
+    <section class="overview" aria-label="Syllabus overview">
+      <div class="overview-item"><span class="overview-icon">⌘</span><div><strong>Beginner to advanced</strong><small>Follow a clear sequence</small></div></div>
+      <div class="overview-item"><span class="overview-icon">{ }</span><div><strong>Practical examples</strong><small>Connect theory to queries</small></div></div>
+      <div class="overview-item"><span class="overview-icon">✓</span><div><strong>Quiz after topics</strong><small>Check your understanding</small></div></div>
+      <div class="overview-item"><span class="overview-icon">↗</span><div><strong>Problem solving</strong><small>Build practical skills</small></div></div>
+    </section>
+
+    <section class="syllabus-section section-wrap" id="syllabus">
+      <div class="section-heading">
+        <div><div class="eyebrow dark-eyebrow">THE COMPLETE CURRICULUM</div><h2>Explore the <span>syllabus</span></h2><p>Choose a level, open a module, and see what you will learn.</p></div>
+        <div class="syllabus-tools"><label class="search-box"><span>⌕</span><input id="topicSearch" type="search" placeholder="Search SQL topics..." aria-label="Search SQL topics"></label><button id="expandAll" class="text-button">Expand all +</button></div>
+      </div>
+      <div class="level-tabs" role="tablist" aria-label="Filter syllabus by level">
+        <button class="level-tab active" data-level="all" role="tab" aria-selected="true">All levels <span>10</span></button>
+        <button class="level-tab" data-level="beginner" role="tab" aria-selected="false">01 Beginner</button>
+        <button class="level-tab" data-level="intermediate" role="tab" aria-selected="false">02 Intermediate</button>
+        <button class="level-tab" data-level="advanced" role="tab" aria-selected="false">03 Advanced</button>
+        <button class="level-tab" data-level="practice" role="tab" aria-selected="false">04 Business practice</button>
+      </div>
+      <div class="syllabus-layout">
+        <div class="module-list" id="moduleList">
+          <article class="module-card" data-level="beginner" data-search="introduction database sql dbms tables rows columns data types int integer varchar varchar(50) char char(2) text decimal numeric float bool boolean bigint date datetime select">
+            <button class="module-head" aria-expanded="false"><span class="module-number">01</span><span class="module-title-wrap"><strong>SQL Foundations</strong><small>Introduction, databases, tables, data types and your first query</small></span><span class="module-count">7 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>01.1</span> What is SQL? — definition and real-world uses</li><li><span>01.2</span> Database, DBMS and RDBMS</li><li><span>01.3</span> Tables, rows and columns</li><li><span>01.4</span> SQL data types: VARCHAR, CHAR, FLOAT, BOOL, INT, BIGINT, DATE and DATETIME</li><li><span>01.5</span> SELECT and FROM</li><li><span>01.6</span> SELECT DISTINCT and column aliases</li><li><span>01.7</span> SQL syntax, comments and semicolons</li></ul><div class="module-footer"><span>Outcome: understand table structure and write your first SELECT query</span><button class="practice-link" data-topic="SQL Foundations">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="beginner" data-search="where and or not between in like is null order by limit filtering sorting">
+            <button class="module-head" aria-expanded="false"><span class="module-number">02</span><span class="module-title-wrap"><strong>Filtering & Sorting</strong><small>Find the right records and control result order</small></span><span class="module-count">6 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>02.1</span> WHERE with comparison operators</li><li><span>02.2</span> AND, OR and NOT</li><li><span>02.3</span> BETWEEN, IN and NOT IN</li><li><span>02.4</span> LIKE, wildcards and pattern matching</li><li><span>02.5</span> IS NULL and IS NOT NULL</li><li><span>02.6</span> ORDER BY, ASC, DESC and LIMIT</li></ul><div class="module-footer"><span>Outcome: filter and sort data confidently</span><button class="practice-link" data-topic="Filtering & Sorting">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="beginner" data-search="insert update delete create alter drop truncate constraints primary key foreign key unique not null default">
+            <button class="module-head" aria-expanded="false"><span class="module-number">03</span><span class="module-title-wrap"><strong>Data & Table Management</strong><small>Create tables and safely change data</small></span><span class="module-count">6 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>03.1</span> CREATE DATABASE and CREATE TABLE</li><li><span>03.2</span> INSERT INTO</li><li><span>03.3</span> UPDATE and DELETE</li><li><span>03.4</span> ALTER TABLE: add, modify and rename columns</li><li><span>03.5</span> DROP, TRUNCATE and their differences</li><li><span>03.6</span> Constraints: PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, DEFAULT</li></ul><div class="module-footer"><span>Outcome: manage table structure and records</span><button class="practice-link" data-topic="Data & Table Management">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="intermediate" data-search="count sum avg min max aggregate group by having case when conditional aggregation">
+            <button class="module-head" aria-expanded="false"><span class="module-number">04</span><span class="module-title-wrap"><strong>Aggregate Functions & Grouping</strong><small>Summarise data and compare groups</small></span><span class="module-count">5 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>04.1</span> COUNT, SUM, AVG, MIN and MAX</li><li><span>04.2</span> GROUP BY with one or more columns</li><li><span>04.3</span> WHERE vs HAVING</li><li><span>04.4</span> Conditional aggregation with CASE WHEN</li><li><span>04.5</span> Handling NULL values in aggregates</li></ul><div class="module-footer"><span>Outcome: answer business questions with summaries</span><button class="practice-link" data-topic="Aggregate Functions & Grouping">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="intermediate" data-search="inner join left join right join full outer cross self join relationships">
+            <button class="module-head" aria-expanded="false"><span class="module-number">05</span><span class="module-title-wrap"><strong>SQL Joins</strong><small>Combine data from related tables</small></span><span class="module-count">5 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>05.1</span> INNER JOIN</li><li><span>05.2</span> LEFT JOIN and unmatched records</li><li><span>05.3</span> RIGHT JOIN and FULL OUTER JOIN concepts</li><li><span>05.4</span> CROSS JOIN and SELF JOIN</li><li><span>05.5</span> Join multiple tables and avoid duplicate rows</li></ul><div class="module-footer"><span>Outcome: combine customer, order and product data</span><button class="practice-link" data-topic="SQL Joins">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="intermediate" data-search="string functions concat upper lower trim ltrim rtrim replace left right substring locate date functions">
+            <button class="module-head" aria-expanded="false"><span class="module-number">06</span><span class="module-title-wrap"><strong>String, Date & Numeric Functions</strong><small>Clean, transform and format values</small></span><span class="module-count">5 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>06.1</span> UPPER, LOWER, CONCAT and TRIM</li><li><span>06.2</span> LTRIM, RTRIM, REPLACE, LEFT, RIGHT and SUBSTRING</li><li><span>06.3</span> LOCATE / INSTR and string length</li><li><span>06.4</span> Date functions: YEAR, MONTH, DATE_FORMAT and date differences</li><li><span>06.5</span> ROUND, ABS, CEIL and FLOOR</li></ul><div class="module-footer"><span>Outcome: transform real-world data</span><button class="practice-link" data-topic="SQL Functions">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="advanced" data-search="subquery correlated scalar exists not exists any all derived table cte with recursive">
+            <button class="module-head" aria-expanded="false"><span class="module-number">07</span><span class="module-title-wrap"><strong>Subqueries & CTEs</strong><small>Break complex questions into logical steps</small></span><span class="module-count">5 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>07.1</span> Scalar and multi-row subqueries</li><li><span>07.2</span> Subqueries with WHERE and HAVING</li><li><span>07.3</span> Correlated subqueries</li><li><span>07.4</span> EXISTS and NOT EXISTS</li><li><span>07.5</span> Common Table Expressions (WITH) and recursive CTE concepts</li></ul><div class="module-footer"><span>Outcome: structure multi-step analysis queries</span><button class="practice-link" data-topic="Subqueries & CTEs">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="advanced" data-search="window functions over partition by row number rank dense rank lag lead running total moving average">
+            <button class="module-head" aria-expanded="false"><span class="module-number">08</span><span class="module-title-wrap"><strong>Window Functions</strong><small>Rank, compare and analyse rows without collapsing them</small></span><span class="module-count">5 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>08.1</span> OVER and PARTITION BY</li><li><span>08.2</span> ROW_NUMBER, RANK and DENSE_RANK</li><li><span>08.3</span> LAG and LEAD</li><li><span>08.4</span> Running totals and moving averages</li><li><span>08.5</span> Top-N per group and handling ties</li></ul><div class="module-footer"><span>Outcome: solve advanced analytics questions</span><button class="practice-link" data-topic="Window Functions">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="advanced" data-search="case when transactions indexes views stored procedures transactions commit rollback explain query optimization performance">
+            <button class="module-head" aria-expanded="false"><span class="module-number">09</span><span class="module-title-wrap"><strong>Professional SQL Concepts</strong><small>Write safer queries and understand performance</small></span><span class="module-count">5 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>09.1</span> CASE WHEN and IF expressions</li><li><span>09.2</span> Views and when to use them</li><li><span>09.3</span> Index basics and query performance</li><li><span>09.4</span> Transactions, COMMIT and ROLLBACK</li><li><span>09.5</span> EXPLAIN and query optimisation fundamentals</li></ul><div class="module-footer"><span>Outcome: understand production-style SQL basics</span><button class="practice-link" data-topic="Professional SQL Concepts">Explore module ↗</button></div></div>
+          </article>
+          <article class="module-card" data-level="practice" data-search="case study business problems second highest salary top customers sales duplicates missing records sql practice">
+            <button class="module-head" aria-expanded="false"><span class="module-number">10</span><span class="module-title-wrap"><strong>Business Case SQL Practice</strong><small>Turn SQL knowledge into practical problem solving</small></span><span class="module-count">6 topics</span><span class="module-chevron">＋</span></button>
+            <div class="module-content"><ul><li><span>10.1</span> SQL problem-solving practice set</li><li><span>10.2</span> Second-highest salary and Nth-highest values</li><li><span>10.3</span> Top customers or products by region</li><li><span>10.4</span> Duplicate records and missing matches</li><li><span>10.5</span> Sales, profit, retention and monthly trend case studies</li><li><span>10.6</span> Explain your query and discuss edge cases</li></ul><div class="module-footer"><span>Outcome: solve realistic data analysis tasks</span><button class="practice-link" data-topic="Business Case SQL Practice">Explore module ↗</button></div></div>
+          </article>
+        </div>
+        <aside class="progress-panel" id="learning-path">
+          <div class="panel-label">YOUR LEARNING PATH</div><h3>Build skills in order.</h3><p>Move forward after you understand the current level. Revisit earlier topics whenever you need a refresher.</p>
+          <div class="path-step"><span class="path-node node-one">01</span><div><strong>Build the basics</strong><small>SELECT, WHERE, sorting, table basics</small></div></div>
+          <div class="path-line"></div>
+          <div class="path-step"><span class="path-node node-two">02</span><div><strong>Analyse data</strong><small>Aggregates, grouping, joins, functions</small></div></div>
+          <div class="path-line"></div>
+          <div class="path-step"><span class="path-node node-three">03</span><div><strong>Think advanced</strong><small>Subqueries, CTEs, window functions</small></div></div>
+          <div class="path-line"></div>
+          <div class="path-step"><span class="path-node node-four">04</span><div><strong>Practise business cases</strong><small>Real scenarios and analytical practice</small></div></div>
+          <a href="#resources" class="panel-link">Explore learning tools <span>↗</span></a>
+        </aside>
+      </div>
+      <div class="empty-state" id="emptyState" hidden><strong>No topics found</strong><p>Try another keyword or choose a different level.</p></div>
+    </section>
+
+    <section class="resources-section" id="resources"><div class="section-wrap"><div class="eyebrow dark-eyebrow">LEARN BY PRACTISING</div><h2>More than just <span>theory.</span></h2><p class="resources-intro">The syllabus is your roadmap. Use these learning tools to turn each concept into a practical skill.</p><div class="resource-grid">
+      <a href="lab.html" class="resource-card"><span class="resource-icon teal-icon">⌨</span><h3>Live SQL Practice Lab</h3><p>Write queries, test your logic and learn from mistakes.</p><span class="resource-link">Open practice lab ↗</span></a>
+      <a href="lessons.html" class="resource-card"><span class="resource-icon orange-icon">◎</span><h3>Topic Quizzes</h3><p>Check your understanding after completing each lesson.</p><span class="resource-link">Take a quiz ↗</span></a>
+      <a href="notes.html" class="resource-card"><span class="resource-icon blue-icon">✎</span><h3>Handwritten SQL Notes</h3><p>Revise syntax and common SQL patterns.</p><span class="resource-link">Open notes ↗</span></a>
+    </div></div></section>
+    <section class="bottom-cta"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Your next skill starts with one query.</h2><p>Start with the fundamentals. Build confidence one topic at a time.</p></div><a class="button button-primary" href="#syllabus">Start the syllabus <span>→</span></a></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><img class="brand-logo" src="logo.svg" alt=""><span>SQL<span class="brand-accent">Bite</span></span></a><p>Learn SQL. Think logically. Solve real problems.</p><span>© <span id="currentYear"></span> SQLBite. Built for curious minds.</span></footer>
+
+  <dialog class="module-dialog" id="moduleDialog"><button class="dialog-close" id="dialogClose" aria-label="Close dialog">×</button><div class="eyebrow dark-eyebrow">MODULE PREVIEW</div><h2 id="dialogTitle">SQL Foundations</h2><p>Open the SQL lessons to work through topic explanations, examples, practice questions and quizzes.</p><div class="preview-points"><span>01</span> Topic-by-topic lessons</div><div class="preview-points"><span>02</span> SQL query examples with explanations</div><div class="preview-points"><span>03</span> Practice questions and a topic quiz</div><a class="button button-primary dialog-ok" href="lessons.html">Open SQL lessons ↗</a><button class="button button-ghost dialog-ok" id="dialogOk">Close preview</button></dialog>
+</body>
+</html>

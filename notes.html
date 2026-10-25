@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SQLBite | Spiral SQL Notes</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="SQLBite home">
+      <span class="logo">S</span>
+      <span>SQL<span class="blue">Bite</span>
+        <small>LEARN SQL ONE PAGE AT A TIME</small>
+      </span>
+    </a>
+    <nav id="siteNav" class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="lab.html">SQL Lab</a>
+      <a href="syllabus.html">Syllabus</a>
+      <a href="lessons.html">Course</a>
+    </nav>
+    <div class="topbar-actions">
+      <button id="siteMenuBtn" class="site-menu-btn" type="button" aria-label="Open site navigation" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="sidebar">Topics</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" id="sidebar">
+      <p class="eyebrow">YOUR NOTEBOOK</p>
+      <h2>SQL Contents</h2>
+
+      <input id="search" type="search" placeholder="Search SQL topics...">
+
+      <div class="progress-text">
+        <span>Reading progress</span>
+        <b id="progressText">1 / 22</b>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+
+      <nav id="topicList"></nav>
+    </aside>
+
+    <section class="study-area">
+      <div class="breadcrumb">
+        SQLBite / SQL Notes / <b id="breadcrumb">Introduction to SQL</b>
+      </div>
+
+      <div class="book" id="book">
+        <div class="spiral" id="spiral"></div>
+
+        <article class="paper" id="paper">
+          <div class="paper-header">
+            <span>DATABASE MANAGEMENT • SQL</span>
+            <span>STUDENT NOTES</span>
+          </div>
+
+          <div id="pageContent" class="page-content"></div>
+
+          <div class="paper-footer">
+            <span>SQLBite • Learn by doing</span>
+            <span id="pageNumber">PAGE 01</span>
+          </div>
+
+          <button class="page-edge previous-edge"
+                  id="previousEdge"
+                  aria-label="Previous page"></button>
+          <button class="page-edge next-edge"
+                  id="nextEdge"
+                  aria-label="Next page"></button>
+        </article>
+
+        <div class="flip-sheet" id="flipSheet" aria-hidden="true">
+          <div class="flip-front">
+            <div class="flip-paper-content" id="flipFrontContent"></div>
+          </div>
+          <div class="flip-back">
+            <div class="flip-paper-content" id="flipBackContent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <button id="prevBtn" disabled>← Previous</button>
+        <div class="nav-middle">
+          <b id="currentTitle">Introduction to SQL</b>
+          <div id="dots"></div>
+        </div>
+        <button id="nextBtn" class="next-btn">Next page →</button>
+      </div>
+
+      <p class="hint">Tip: Use ← and → arrow keys to turn notebook pages.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© SQLBite Learning Notebook</span>
+    <span>Definitions • Examples • Practice</span>
+  </footer>
+
+  <script src="notes.js"></script>
+</body>
+</html>

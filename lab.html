@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practise SQL with beginner-friendly examples and query challenges.">
+  <title>SQL Lab | SQLBite</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="content-pages.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="brand" aria-label="SQLBite home"><img class="brand-logo" src="logo.svg" alt=""><span>SQL<em>Bite</em></span></a>
+      <nav id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="syllabus.html">Syllabus</a><a href="lessons.html">Courses</a>
+        <a class="active" href="lab.html">SQL Lab</a><a href="notes.html">Notes</a><a href="about.html">About</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-primary" href="lessons.html">Explore Lessons</a></div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
+    </div>
+  </header>
+  <main class="content-page">
+    <section class="content-hero">
+      <div class="container">
+        <div class="eyebrow">PRACTISE SQL</div>
+        <h1>SQL Lab</h1>
+        <p>Pick a challenge, inspect its sample table and data, then run your SQL against a real SQLite database in your browser.</p>
+      </div>
+    </section>
+    <section class="container content-main">
+      <div class="content-heading"><h2>SQL practice editor</h2><p>Choose a challenge to load the matching question and sample database. You can edit the setup SQL and run your own queries.</p></div>
+      <section class="content-card sql-lab" aria-labelledby="activeChallenge">
+        <label class="lab-select-label" for="challengeSelect">Choose a practice question</label>
+        <select id="challengeSelect"></select>
+        <h3 id="activeChallenge">Loading SQL engine…</h3>
+        <p id="activePrompt" class="lab-prompt"></p>
+        <div class="lab-tables" id="labTables"></div>
+        <label class="lab-select-label" for="sqlEditor">Your SQL query</label>
+        <textarea id="sqlEditor" spellcheck="false" aria-label="SQL query editor" placeholder="SELECT * FROM Employees;"></textarea>
+        <div class="lab-actions">
+          <button class="btn btn-primary" id="runQuery" type="button" disabled>Run query</button>
+          <button class="btn btn-outline" id="showSolution" type="button">Show answer</button>
+          <button class="btn btn-outline" id="resetDatabase" type="button" disabled>Reset sample data</button>
+        </div>
+        <p id="engineStatus" class="engine-status" role="status">Loading the SQLite engine… Internet connection is required the first time.</p>
+        <div id="queryResult" class="query-result" aria-live="polite"></div>
+      </section>
+      <div class="content-heading" style="margin-top:32px"><h2>SQL practice challenges</h2><p>Each challenge has a matching table setup. Select one above to practice it.</p><label class="practice-search"><span>⌕</span><input id="labSearch" type="search" placeholder="Find a challenge or table..." aria-label="Search SQL lab challenges"></label><p class="question-count" id="labCount" aria-live="polite"></p></div>
+      <div class="content-grid" id="labList"></div>
+      <p class="content-note" id="labEmpty" hidden>No challenges match. Try another word.</p>
+      <p class="content-note">The SQL engine runs in your browser. Your queries and sample data are not sent to a server.</p>
+    </section>
+  </main>
+  <footer class="content-footer">© <span id="year"></span> SQLBite · Learn SQL. Think logically. Solve problems.</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js"></script>
+  <script src="script.js" defer></script>
+  <script src="practice-content.js" defer></script>
+  <script src="lab.js" defer></script>
+</body>
+</html>
